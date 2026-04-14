@@ -13,7 +13,7 @@ public class BarbeariaService {
         agendamentos.add(agendamento);
     }
 
-    public void ListarAgendamentos(){
+    public void listarAgendamentos(){
         System.out.println("=== Lista de Agendamentos ===");
         for (Agendamento agendamento : agendamentos){
             System.out.println(agendamento);

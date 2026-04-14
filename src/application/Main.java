@@ -43,7 +43,7 @@ public class Main {
                     System.out.println();
                     break;
                 case 2:
-                    barbeariaService.ListarAgendamentos();
+                    barbeariaService.listarAgendamentos();
                     System.out.println();
                     break;
                 case 0:
