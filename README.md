@@ -39,7 +39,7 @@ O **Agendamento Barbearia** é uma aplicação desenvolvida em Java com o objeti
 |---|---|
 | **Java** | Linguagem principal do projeto |
 | **IntelliJ IDEA** | IDE utilizada no desenvolvimento |
-| **OOP** | Paradigma de Programação Orientada a Objetos |
+| **POO** | Paradigma de Programação Orientada a Objetos |
 
 ---
 
