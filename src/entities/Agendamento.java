@@ -12,6 +12,14 @@ public class Agendamento {
         this.horario = horario;
     }
 
+    public String getData() {
+        return data;
+    }
+
+    public String getHorario() {
+        return horario;
+    }
+
     @Override
     public String toString() {
         return cliente.getNome() +

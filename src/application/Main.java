@@ -37,9 +37,14 @@ public class Main {
                     String horario = sc.nextLine().trim();
 
                     Cliente cliente = new Cliente(nome, telefone);
-                    barbeariaService.agendar(cliente, data, horario);
+                    boolean agendado = barbeariaService.agendar(cliente, data, horario);
 
-                    System.out.println("Agendamento concluido com sucesso!");
+                    if (agendado) {
+                        System.out.println("Agendamento concluido com sucesso!");
+                    } else {
+                        System.out.println("Horário indisponível. Tente outro horário.");
+                    }
+
                     System.out.println();
                     break;
                 case 2:

@@ -8,17 +8,31 @@ public class BarbeariaService {
 
     private List<Agendamento> agendamentos = new ArrayList<>();
 
-    public void agendar (Cliente cliente, String data, String horario) {
+    public boolean agendar (Cliente cliente, String data, String horario) {
+
+        for (Agendamento a : agendamentos){
+            if (a.getData().equals(data) && a.getHorario().equals(horario)) {
+                return false;
+            }
+        }
+
         Agendamento agendamento = new Agendamento(cliente, data, horario);
         agendamentos.add(agendamento);
+        return true;
     }
 
     public void listarAgendamentos(){
-        System.out.println("=== Lista de Agendamentos ===");
-        for (Agendamento agendamento : agendamentos){
-            System.out.println(agendamento);
-        }
-    }
+        System.out.println("==== LISTAR AGENDAMENTOS ====");
 
+        if (agendamentos.isEmpty()){
+            System.out.println("Nenhum agendamento foi encontrado!");
+        }
+        else {
+            for (Agendamento agendamento : agendamentos){
+                System.out.println(agendamento);
+            }
+        }
+
+    }
 
 }
