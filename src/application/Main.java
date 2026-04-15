@@ -17,10 +17,10 @@ public class Main {
             System.out.println("1. Novo Agendamento");
             System.out.println("2. Listar Agendamentos");
             System.out.println("0. Sair");
-            System.out.print("Escolha uma opção: ");
+            System.out.print("Escolha uma opção: \n");
             opcao = sc.nextInt();
             sc.nextLine(); // Consumir a quebra de linha
-            System.out.println();
+
 
             switch (opcao) {
                 case 1:
@@ -40,12 +40,10 @@ public class Main {
                     boolean agendado = barbeariaService.agendar(cliente, data, horario);
 
                     if (agendado) {
-                        System.out.println("Agendamento concluido com sucesso!");
+                        System.out.println("Agendamento concluido com sucesso! \n");
                     } else {
-                        System.out.println("Horário indisponível. Tente outro horário.");
+                        System.out.println("Horário indisponível. Tente outro horário. \n");
                     }
-
-                    System.out.println();
                     break;
                 case 2:
                     barbeariaService.listarAgendamentos();
